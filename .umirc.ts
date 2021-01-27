@@ -10,6 +10,7 @@ export default defineConfig({
       title: 'github',
       path: 'https://github.com/stack-wuh'
     }
-  ]
+  ],
+  description: "更简单, 更快速!",
   // more config: https://d.umijs.org/config
 });
