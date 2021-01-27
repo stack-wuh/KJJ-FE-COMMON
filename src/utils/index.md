@@ -148,7 +148,7 @@ export default () => {
 }
 ```
 
-### 差异化对象
+### differenceObj
 对比两个对象的差异, 现在只能对比简单类型的差异
 ```jsx
 import React from 'react'
