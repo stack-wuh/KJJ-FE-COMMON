@@ -1,6 +1,6 @@
 ## useForceUpdate
 
-先看一下React官方对于forceUpdate的描述[forceupdate]
+先看一下React官方对于forceUpdate的描述[forceupdate], 用于强制刷新组件状态。
 
 众所周知, useRef所引用的值是不被React的响应式同步更新的至视图的, 所以我们可以直接使用Ref的值的引用来验证forceUpdate的有效性。 
 
