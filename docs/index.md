@@ -22,13 +22,13 @@ git clone https://github.com/stack-wuh/usualCmWithHooks.git
 
 ```
 
-#### 2.NPM
+#### 2. NPM
 
 ```bash
 npm install kjj-fe-common --save
 ```
 
-#### CDN
+#### 3. CDN
 
 ```javascript
 <script src="https://unpkg.com/kjj-fe-common@1.1.0/dist/index.js"></script>
