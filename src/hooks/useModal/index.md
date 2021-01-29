@@ -4,6 +4,35 @@
   封装一些与Modal相关的操作
 </Alert>
 
+### Modal
+
+Modal 的配置项目类型有很多, 但是有一项我们经常会忘记配置, 那就是`Modal`的`onCancel`事件, 现在把这个问题解决下, 即使忘记配置`onCancel`, Modal 也可以关闭.
+
+```jsx
+import React from 'react';
+import { Modal, Button } from 'antd';
+import { useModal } from 'kjj-fe-common';
+
+export default () => {
+  const modalConfig = useModal({
+    visible: false,
+    config: {
+      title: '点击右上角的关闭图标',
+    },
+  });
+
+  return (
+    <>
+      <Modal {...modalConfig}>
+        <h3>点击右上角的X图标, 关闭对话框</h3>
+        <p>特意不配置Modal的onCancel事件</p>
+      </Modal>
+      <Button onClick={modalConfig.toggle}>Open Modal</Button>
+    </>
+  );
+};
+```
+
 ### Table + Modal
 
 业务中会遇到的操作需求, Table + Modal, 常见的场景是点击表格操作列的详情按钮, 弹出一个 Modal 对话框, 用于查看详情.
