@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "kjj-fe-common",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "shadow <wuh131420@foxmail.com>",
   "scripts": {
     "start": "dumi dev",
