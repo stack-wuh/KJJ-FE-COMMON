@@ -12,7 +12,13 @@ import useForceUpdate from '../useForceUpdate';
  */
 const STORE_INIT_KEY = 'row';
 
-const useModal = ({ visible, onCancel, onSubmit, config, formConfig = {} }) => {
+const useModal = ({
+  visible = false,
+  onCancel,
+  onSubmit,
+  config,
+  formConfig = {},
+}) => {
   const [allowOpen, { toggle }] = useToggle(visible);
   const [submitLoading, { toggleFalse, toggleTure }] = useToggle(false);
   const forceUpdate = useForceUpdate();
