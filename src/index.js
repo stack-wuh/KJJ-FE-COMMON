@@ -14,6 +14,8 @@ export { default as useComponentWillUnMount } from './hooks/useComponentWillUnMo
 
 export { default as useModal } from './hooks/useModal';
 
+export { default as useTimeout } from './hooks/useTimeout';
+
 export { default as useModalGroup } from './hooks/useModalGroup';
 
 export { default as ComposeSearch } from './components/ComposeSearch';
