@@ -474,3 +474,37 @@ const Demo = () => {
 };
 export default Demo;
 ```
+
+#### 4. clear: 清除全部参数, 保留 initialValues 预置参数
+
+```jsx
+import React from 'react';
+import { utils } from 'kjj-fe-common';
+const { cacheSearch } = utils;
+
+const Demo = () => {
+  const logger = (...props) => {
+    console.group('============ Logger  ===========');
+    console.log('========== props: ', props);
+    console.groupEnd();
+  };
+
+  const initialValues = {
+    name: 'shadow',
+    age: 10,
+  };
+
+  const memo = cacheSearch(logger, { initialValues });
+
+  memo.clear();
+
+  return (
+    <>
+      <p>打开控制台, 查看打印日志</p>
+      <p>initialValues: {JSON.stringify(initialValues)}</p>
+      <div>{JSON.stringify(memo.get())}</div>
+    </>
+  );
+};
+export default Demo;
+```
