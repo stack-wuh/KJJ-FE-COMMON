@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-invalid-this */
+/* eslint-disable @typescript-eslint/no-this-alias */
 function memoQuery(fn, ops = {}) {
   const { initialValues = {} } = ops;
 
@@ -26,11 +28,12 @@ function memoQuery(fn, ops = {}) {
 
   function call(params = {}) {
     update('value', params);
+    const context = this;
 
     const query = call.get();
 
     setTimeout(() => {
-      fn.apply(this, [query]);
+      fn.apply(context, [query]);
     }, 100);
   }
 
@@ -67,7 +70,8 @@ function memoQuery(fn, ops = {}) {
   };
 
   call.unmounted = cb => {
-    call = new Object(null);
+    // eslint-disable-next-line no-func-assign
+    call = {};
     cache.clear();
     cb?.();
   };

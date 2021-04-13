@@ -18,6 +18,14 @@ export { default as useTimeout } from './hooks/useTimeout';
 
 export { default as useModalGroup } from './hooks/useModalGroup';
 
+export { default as useTitle } from './hooks/useTitle';
+
+export { default as useScroll } from './hooks/useScroll';
+
+export { default as useEventListener } from './hooks/useEventListener';
+
+export { default as useDocumentVisibility } from './hooks/useDocumentVisibility';
+
 export { default as ComposeSearch } from './components/ComposeSearch';
 
 export { default as utils } from './utils';

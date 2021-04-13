@@ -129,7 +129,7 @@ Table 与 Form 的交互中, 偶尔会出现一些需要格式化数据后, 将�
 import React from 'react';
 import { Table, Modal, Form, Input } from 'antd';
 import { useModal } from 'kjj-fe-common';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 import 'antd/dist/antd.css';
 
@@ -155,7 +155,7 @@ export default () => {
       form,
       parser: val => ({
         ...val,
-        birth: moment(new Date()).format('YYYY-MM-DD hh:mm:ss'),
+        birth: dayjs(new Date()).format('YYYY-MM-DD hh:mm:ss'),
       }),
     },
     onSubmit: handleSubmit,

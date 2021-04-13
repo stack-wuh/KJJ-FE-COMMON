@@ -9,7 +9,7 @@ export default (d, n) => {
   }
   const number = d;
   // eslint-disable-next-line no-restricted-properties
-  if (isNaN(number) || number >= Math.pow(10, 21)) {
+  if (Number.isNaN(number) || number >= Math.pow(10, 21)) {
     return number.toString();
   }
   if (typeof n === 'undefined' || n === 0) {
