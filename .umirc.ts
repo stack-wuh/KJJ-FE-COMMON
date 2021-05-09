@@ -15,5 +15,6 @@ export default defineConfig({
   description: '更简单, 更快速!',
   base: '/doc-common/',
   publicPath: '/doc-common/',
+  exportStatic: {},
   // more config: https://d.umijs.org/config
 });
